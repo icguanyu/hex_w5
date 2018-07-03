@@ -1,0 +1,273 @@
+$blue: #42adeb;
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif !important;
+  position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+select,
+option,
+input {
+  font-family: "Noto Sans TC";
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #bbb;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+}
+
+@include scrollbars(8px, #bad2de, transparent);
+
+.header {
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  z-index: 1;
+  position: relative;
+  .logo {
+    padding: 20px 0px;
+    margin: 0 auto;
+    width: 200px;
+    position: relative;
+    p {
+      font-size: 24px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 4px;
+      font-style: italic;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+.toolbtn {
+  position: absolute;
+  right: 50px;
+  top: 90px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 0px 5px #9c9c9c;
+  transition: 0.2s;
+  &:hover {
+    transform: rotate(-30deg);
+  }
+}
+
+.toolbar {
+  width: 100%;
+  height: 80px;
+  background: #f3f2ec;
+  .tool {
+    width: 1024px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sel {
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-family: "Noto Sans TC";
+        width: 200px;
+      }
+      select {
+        display: inline-block;
+        font-family: "Noto Sans TC";
+        border-radius: 0px;
+      }
+    }
+  }
+  .daynight {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    i {
+      margin: 0 5px;
+    }
+    .switch {
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-left: 20px solid #fff;
+      display: inline-block;
+      margin: 0px 5px;
+      width: 40px;
+      height: 14px;
+      background: green;
+      transition: 0.3s;
+    }
+    .night {
+      border-left: 1px solid #fff;
+      border-right: 20px solid #fff;
+    }
+  }
+}
+.contain {
+  width: 1024px;
+  margin: 20px auto;
+  .mainview {
+    height: 930px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pages{
+      width: 800px;
+      height: 930px;
+      overflow: hidden;
+      position: relative;
+    }
+    .page {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 930px;
+      }
+    }
+    .next,
+    .prev {
+      cursor: pointer;
+      height: 260px;
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+      transition: 0.1s;
+      &:hover {
+        background: #9c9c9c;
+      }
+      i {
+        color: #ddd;
+        cursor: pointer;
+        font-size: 48px;
+        margin: 0px 10px;
+      }
+    }
+  }
+}
+.albums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pic_view {
+    width: 600px;
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;
+    padding: 20px 0px;
+    .pic {
+      cursor: pointer;
+      p {
+        font-size: 12px;
+        padding-bottom: 5px;
+        margin: 0;
+        text-align: center;
+      }
+      img {
+        width: 80px;
+        height: 120px;
+        display: inline-block;
+      }
+    }
+    .now {
+      border: 2px solid #42adeb;
+      position: relative;
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        top: -5px;
+        border-top: 10px solid #42adeb;
+        border-right: 10px solid transparent;
+      }
+    }
+  }
+  .sm_prev,
+  .sm_next {
+    margin: 0 10px;
+    cursor: pointer;
+    i {
+      font-size: 26px;
+    }
+  }
+}
+.rangebar {
+  width: 600px;
+  position: relative;
+  margin: 0 auto;
+  .slider {
+    appearance: none;
+    width: 100%;
+    outline: none;
+    height: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 40px; /* Set a specific slider handle width */
+      height: 15px; /* Slider handle height */
+      background: #42adeb; /* Green background */
+      border: 1px solid #42adeb;
+      cursor: pointer; /* Cursor on hover */
+    }
+  }
+  &::before,&::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background: #dc3545;
+    top: 4px;
+    color:#fff;
+    text-align: center;
+    line-height: 15px;
+  }
+  &::before{
+    content: '◀';
+    left: -30px;
+    border-radius: 5px 0 0 5px;
+  }
+  &::after{
+    content: '▶';
+    border-radius: 0 5px 5px 0;
+    right: -30px;
+  }
+  .rangevalue{
+    text-align: center;
+    margin: 0;
+  }
+}

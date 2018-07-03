@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>內頁</title>
+  <link rel="stylesheet" href="style/page.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css' />
+
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="https://vignette.wikia.nocookie.net/onepiece/images/7/75/One_Piece_Logo.png/revision/latest?cb=20161004023941"
+        alt="" />
+    </div>
+    <div class="toolbtn">
+      <i class="fas fa-wrench"></i>
+    </div>
+  </div>
+  <div class="toolbar">
+    <div class="tool">
+      <div class="sel">
+        <span>傳送門</span>
+        <select class="custom-select" id="chapter">
+          <option selected>選擇章節</option>
+          <option value="1">第1話</option>
+          <option value="2">第2話</option>
+          <option value="3">第3話</option>
+        </select>
+        <select class="custom-select" id="pages">
+          <option selected>選擇頁數</option>
+          <option value="1">第1頁</option>
+          <option value="2">第2頁</option>
+          <option value="3">第3頁</option>
+        </select>
+      </div>
+      <div class="daynight">
+        <span>日間模式</span>
+        <i class="far fa-sun"></i>
+        <div class="switch night"></div>
+        <i class="far fa-moon"></i>
+        <span>夜間模式</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contain">
+    <div class="mainview">
+      <div class="prev">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="pages">
+        <div class="prevpage page"></div>
+        <div class="nowpage page"></div>
+        <div class="nextpage page"></div>
+      </div>
+      <div class="next">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+
+    <div class="albums">
+      <div class="sm_prev">
+        <i class="fas fa-angle-double-left"></i>
+      </div>
+      <div class="pic_view">
+        <div class="pic">
+          <p>01</p>
+          <div class="now">
+            <img src="img/storyboard-1.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>02</p>
+          <div>
+            <img src="img/storyboard-2.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>03</p>
+          <div>
+            <img src="img/storyboard-3.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>04</p>
+          <div>
+            <img src="img/storyboard-4.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>05</p>
+          <div>
+            <img src="img/storyboard-5.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>06</p>
+          <div>
+            <img src="img/storyboard-6.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>07</p>
+          <div>
+            <img src="img/storyboard-7.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>08</p>
+          <div>
+            <img src="img/storyboard-8.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>09</p>
+          <div>
+            <img src="img/storyboard-9.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>10</p>
+          <div>
+            <img src="img/storyboard-10.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>11</p>
+          <div>
+            <img src="img/storyboard-11.png" alt="">
+          </div>
+        </div>
+        <div class="pic">
+          <p>12</p>
+          <div>
+            <img src="img/storyboard-12.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="sm_next">
+        <i class="fas fa-angle-double-right"></i>
+      </div>
+      <div class="now"></div>
+
+    </div>
+
+    <!-- <div class="rangebar">
+      <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+      <p>值:
+        <span id="demo"></span>
+      </p>
+    </div> -->
+
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="js/all.js"></script>
+
+</html>

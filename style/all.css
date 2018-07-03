@@ -1,0 +1,241 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  cursor: pointer;
+}
+
+.header {
+  background: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 0px 5px #bbb;
+          box-shadow: 0px 0px 5px #bbb;
+}
+
+.header .logo {
+  padding: 20px 0px;
+  margin: 0 auto;
+  width: 200px;
+  position: relative;
+}
+
+.header .logo p {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-style: italic;
+}
+
+.header .logo img {
+  width: 100%;
+}
+
+.wrap {
+  width: 720px;
+  margin: 30px auto;
+}
+
+.wrap .adverst {
+  width: 100%;
+  height: 120px;
+  margin: 30px auto;
+  position: relative;
+  background: #ccc;
+}
+
+.wrap .adverst img {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+  position: absolute;
+}
+
+.wrap .adverst .close {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 1;
+  right: -25px;
+}
+
+.wrap .adverst .close p {
+  letter-spacing: 1px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.wrap .container {
+  width: 100%;
+  height: 480px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .container .coverbox,
+.wrap .container .introbox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+.wrap .container .coverbox {
+  background: #ddd;
+  overflow: hidden;
+}
+
+.wrap .container .coverbox img {
+  width: 100%;
+}
+
+.wrap .container .introbox {
+  padding: 10px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.wrap .container .introbox ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.wrap .container .introbox ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  cursor: pointer;
+}
+
+.wrap .container .introbox .intro p {
+  width: 80px;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.wrap .container .introbox .name {
+  width: 100%;
+  height: 60px;
+}
+
+.wrap .container .introbox .name p {
+  font-size: 24px;
+  font-weight: 800;
+  color: #154392;
+}
+
+.wrap .container .introbox .summary {
+  padding-top: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap .container .introbox .summary p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+
+.wrap .chaper {
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+
+.wrap .chaper ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap .chaper ul li {
+  cursor: pointer;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  color: #333;
+}
+
+.wrap .chaper ul li:hover {
+  background: #42adeb;
+  color: #fff;
+}
+
+.wrap .chaper ul .on {
+  background: #42adeb;
+  color: #fff;
+}
+
+.wrap .chaper .chaperbox {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap .chaper .chaperbox ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrap .chaper .chaperbox ul li {
+  margin: 3px;
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
