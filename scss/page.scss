@@ -7,6 +7,10 @@ html {
   padding: 0;
   font-family: "Noto Sans TC", sans-serif !important;
   position: relative;
+  transition: .5s;
+}
+.dark{
+  background: #333;
 }
 h1,
 h2,
@@ -49,6 +53,7 @@ input {
   border-bottom: 1px solid #eee;
   z-index: 1;
   position: relative;
+  transition: .5s;
   .logo {
     padding: 20px 0px;
     margin: 0 auto;
@@ -65,6 +70,10 @@ input {
       width: 100%;
     }
   }
+}
+.header_dark{
+  background: #333;
+  border: none;
 }
 .toolbtn {
   position: absolute;
@@ -134,6 +143,10 @@ input {
     }
   }
 }
+.toolbar_dark {
+  background: #444;
+  color: #fff;
+}
 .contain {
   width: 1024px;
   margin: 20px auto;
@@ -147,6 +160,10 @@ input {
       height: 930px;
       overflow: hidden;
       position: relative;
+    }
+    .pages_dark{
+      background: #333;
+      border-radius: 5px;
     }
     .page {
       position: absolute;
@@ -172,6 +189,19 @@ input {
         font-size: 48px;
         margin: 0px 10px;
       }
+    }
+    .next_dark,.prev_dark{
+      &:hover {
+        background: #000;
+        color: #333;
+      }
+    }
+    .nav{
+      &:hover {
+        background: #000;
+        color: #333;
+      }
+
     }
   }
 }
@@ -215,6 +245,12 @@ input {
       }
     }
   }
+  .pic_view_dark{
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
   .sm_prev,
   .sm_next {
     margin: 0 10px;
@@ -222,6 +258,9 @@ input {
     i {
       font-size: 26px;
     }
+  }
+  .sm{
+    color: #fff;
   }
 }
 .rangebar {
@@ -271,3 +310,4 @@ input {
     margin: 0;
   }
 }
+

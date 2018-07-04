@@ -8,14 +8,14 @@
   //切換日夜
   $(".switch").on("click", function() {
     $(this).toggleClass("night");
+    $('body').toggleClass('dark')
+    $('.header').toggleClass('header_dark')
+    $('.toolbar').toggleClass('toolbar_dark')
+    $('.pic_view').toggleClass('pic_view_dark')
+    $('.next').toggleClass('next_dark')
+    $('.prev').toggleClass('prev_dark')
+    $('.sm_prev,.sm_next').toggleClass('sm')
   });
-  //取得rangebar的值
-  // var slider = document.getElementById("myRange");
-  // var output = document.getElementById("demo");
-  // output.innerHTML = slider.value;
-  // slider.oninput = function() {
-  //   output.innerHTML = this.value;
-  // };
 
   var now = 1;
   var length = $(".pic").length;
@@ -29,7 +29,7 @@
       now >= length ? (now = length) : (now += 1);
       if (now == length) {
         alert("最後一頁囉");
-        $('.sm_next').css({color: 'red'})
+        //$(".sm_next").css({ color: "red" });
       }
     } else if ($(this).is(".prev")) {
       now <= 1 ? (now = 1) : (now -= 1);
@@ -54,4 +54,7 @@
   }
 
   $(".next,.sm_next,.prev,.sm_prev,.pic").on("click", pageHandler);
+
+
+  //日夜切換
 }

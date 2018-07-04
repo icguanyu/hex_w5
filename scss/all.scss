@@ -20,6 +20,10 @@ li {
   padding: 0;
   margin: 0;
 }
+a{
+  text-decoration: none;
+  color : inherit;
+}
 
 @mixin scrollbars($size, $foreground-color, $background-color) {
   ::-webkit-scrollbar {
@@ -58,21 +62,24 @@ li {
   }
 }
 .wrap {
-  width: 720px;
+  width: 620px;
   margin: 30px auto;
 
   .adverst {
-    width: 100%;
+    width: 620px;
     height: 120px;
     margin: 30px auto;
     position: relative;
     background: #ccc;
-    img {
+    .adbox{
       width: 100%;
-      height: 100%;
-      top: 50%;
-      transform: translatey(-50%);
-      position: absolute;
+      position: relative;
+      img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
     }
     .close {
       cursor: pointer;
@@ -100,7 +107,6 @@ li {
       height: 100%;
     }
     .coverbox {
-      background: #ddd;
       overflow: hidden;
       img {
         width: 100%;
@@ -145,6 +151,21 @@ li {
     ul {
       list-style: none;
       display: flex;
+      .hot{
+        position: relative;
+        &::before{
+          position: absolute;
+          content:'hot';
+          font-size: 12px;
+          color: #fff;
+          border-radius: 4px;
+          padding: 0 3px;
+          left: -5px;
+          top: -10px;
+          background: #ff2424;
+          transform: rotate(-20deg)
+        }
+      }
       li {
         cursor: pointer;
         padding: 10px 20px;
