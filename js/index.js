@@ -22,11 +22,7 @@
   
   function adslide(element, i) {
     if (element.length <= 1) return false;
-    console.log(element.length, i);
-    $(element)
-      .hide()
-      .eq(i)
-      .show();
+    $(element).hide().eq(i).show();
   }
 
   //關閉廣告
